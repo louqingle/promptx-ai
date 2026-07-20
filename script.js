@@ -1,21 +1,30 @@
+const templates = {
+  portrait: "超写实人像，电影感光影，85mm镜头，真实肤质，8K，高细节",
+  anime: "Anime style, masterpiece, vibrant colors, detailed illustration",
+  cyber: "Cyberpunk city, neon lights, cinematic, ultra realistic, 8K",
+  food: "Food photography, soft light, delicious, high detail, commercial"
+};
+
 function imagePrompt() {
-    const text = document.getElementById("input").value.trim();
+  const text = document.getElementById("input").value.trim();
 
-    if (!text) {
-        alert("请输入图片内容");
-        return;
-    }
+  if (!text) {
+    alert("请输入内容");
+    return;
+  }
 
-    document.getElementById("output").value =
-`【中文 Prompt】
+  const prompt = `
+【中文 Prompt】
 
-${text}，电影级光影，超写实，高细节，8K，HDR，真实摄影，柔和自然光，构图精美，专业摄影。
+${text}
+
+超写实，电影感光影，高细节，8K，HDR，真实摄影，柔和自然光，专业构图。
 
 ————————————
 
 【English Prompt】
 
-${text}, cinematic lighting, ultra realistic, masterpiece, 8k, HDR, highly detailed, professional photography, soft light.
+${text}, ultra realistic, cinematic lighting, masterpiece, 8k, HDR, highly detailed.
 
 ————————————
 
@@ -24,62 +33,59 @@ ${text}, cinematic lighting, ultra realistic, masterpiece, 8k, HDR, highly detai
 low quality,
 blurry,
 bad anatomy,
-extra fingers,
-deformed,
 watermark,
-text,
 logo,
-noise`;
+text,
+noise,
+deformed
+`;
+
+  document.getElementById("output").value = prompt;
 }
 
 function videoPrompt() {
-    const text = document.getElementById("input").value.trim();
+  const text = document.getElementById("input").value.trim();
 
-    if (!text) {
-        alert("请输入视频内容");
-        return;
-    }
+  if (!text) {
+    alert("请输入内容");
+    return;
+  }
 
-    document.getElementById("output").value =
-`【视频 Prompt】
+  document.getElementById("output").value = `
+【视频 Prompt】
 
-主题：
-${text}
+主题：${text}
 
 镜头：
-广角 + 特写
+广角、特写、航拍
 
 运镜：
-缓慢推进、环绕、升降
+推进、环绕、升降
 
 光影：
-电影感、体积光、HDR
+电影感、HDR、体积光
 
 画质：
-4K、60FPS、超清
+4K、60FPS
 
 English Prompt：
 
-${text}, cinematic, smooth camera movement, volumetric lighting, 4K, ultra realistic.
+${text}, cinematic camera movement, ultra realistic, volumetric lighting, 4K.
 
 Negative Prompt：
 
-low quality,
 blur,
-noise,
+low quality,
 watermark,
-logo`;
+logo
+`;
 }
 
 function copyPrompt() {
-    const output = document.getElementById("output");
-
-    output.select();
-    document.execCommand("copy");
-
-    alert("Prompt 已复制！");
+  navigator.clipboard.writeText(document.getElementById("output").value);
+  alert("复制成功！");
 }
 
 function fill(text) {
-    document.getElementById("input").value = text;
+  document.getElementById("input").value = text;
 }
