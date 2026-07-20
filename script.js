@@ -17,7 +17,6 @@ async function testSupabase() {
     console.log(data);
   }
 }
-
 testSupabase();
 const templates = {
   portrait: "超写实人像，电影感光影，85mm镜头，真实肤质，8K，高细节",
