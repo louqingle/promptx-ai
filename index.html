@@ -6,11 +6,9 @@
   <title>PromptX AI - AI图片与视频Prompt生成器</title>
 
   <link rel="stylesheet" href="style.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="script.js"></script>
+
 <body>
 
 <div class="bg"></div>
@@ -26,8 +24,6 @@
     </div>
 </header>
 
-
-</header>
 <section class="stats">
 
 <div class="stat">
@@ -46,19 +42,16 @@
 </div>
 
 </section>
+
 <section class="hero">
 
-<input id="input" placeholder="请输入你的创意，例如：一位女孩站在海边"/>
+<input id="input" placeholder="请输入你的创意，例如：一位女孩站在海边">
 
 <div class="buttons">
 
-<button onclick="imagePrompt()">
-🖼️ 图片Prompt
-</button>
+<button onclick="imagePrompt()">🖼️ 图片Prompt</button>
 
-<button onclick="videoPrompt()">
-🎬 视频Prompt
-</button>
+<button onclick="videoPrompt()">🎬 视频Prompt</button>
 
 </div>
 
@@ -70,11 +63,10 @@
 
 <textarea id="output"></textarea>
 
-<button onclick="copyPrompt()">
-📋 一键复制
-</button>
+<button onclick="copyPrompt()">📋 一键复制</button>
 
 </section>
+
 <section class="tools">
 
 <h2>✨ AI 工具</h2>
@@ -82,20 +74,16 @@
 <div class="grid">
 
 <button>🖼 图片 Prompt</button>
-
 <button>🎬 视频 Prompt</button>
-
 <button>🤖 GPT Prompt</button>
-
 <button>🎨 Flux Prompt</button>
-
 <button>🌈 Midjourney</button>
-
 <button>📷 摄影 Prompt</button>
 
 </div>
 
 </section>
+
 <section class="templates">
 
 <h2>🔥 热门模板</h2>
@@ -103,19 +91,12 @@
 <div class="grid">
 
 <button onclick="fill('赛博朋克少女')">赛博朋克</button>
-
 <button onclick="fill('国风美女')">国风</button>
-
 <button onclick="fill('电影感摄影')">电影感</button>
-
 <button onclick="fill('豪车广告')">豪车</button>
-
 <button onclick="fill('小红书穿搭')">穿搭</button>
-
 <button onclick="fill('未来城市')">未来城市</button>
-
 <button onclick="fill('咖啡广告')">咖啡</button>
-
 <button onclick="fill('产品海报')">产品海报</button>
 
 </div>
@@ -142,6 +123,7 @@
 </div>
 
 </section>
+
 <section class="about">
 
 <h2>为什么选择 PromptX AI？</h2>
@@ -166,7 +148,9 @@
 </div>
 
 </section>
+
 <footer>
+
 <section class="tools">
 
 <h2>🤖 AI 工具导航</h2>
@@ -174,32 +158,27 @@
 <div class="grid">
 
 <button onclick="window.open('https://chatgpt.com')">ChatGPT</button>
-
 <button onclick="window.open('https://www.midjourney.com')">Midjourney</button>
-
 <button onclick="window.open('https://www.runwayml.com')">Runway</button>
-
 <button onclick="window.open('https://pika.art')">Pika</button>
-
 <button onclick="window.open('https://hailuoai.com')">Hailuo AI</button>
-
 <button onclick="window.open('https://www.klingai.com')">可灵 AI</button>
 
 </div>
 
 </section>
+
 <h2>联系我们</h2>
 
 <p>📱 微信：LikY05922</p>
-
 <p>📧 邮箱：2144572907@qq.com</p>
-
 <p>🌍 Github：louqingle</p>
 
 <p>©2026 PromptX AI</p>
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="script.js"></script>
 
 </body>
