@@ -1,23 +1,3 @@
-const SUPABASE_URL = "https://tcfpilirqswaqdfnhhvh.supabase.co";
-
-const SUPABASE_KEY = "sb_publishable_KXWSqMGc1OCkGx27qtAZeg_vhFC_xm9";
-
-const supabase = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
-
-async function testSupabase() {
-  const { data, error } = await supabase.auth.getSession();
-
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("✅ Supabase连接成功");
-    console.log(data);
-  }
-}
-testSupabase();
 const templates = {
   portrait: "超写实人像，电影感光影，85mm镜头，真实肤质，8K，高细节",
   anime: "Anime style, masterpiece, vibrant colors, detailed illustration",
