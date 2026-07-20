@@ -14,8 +14,16 @@
 <div class="bg"></div>
 
 <header>
-    <h1>🚀 PromptX AI Pro</h1>
-    <p>一句话，生成专业 AI 图片 · 视频 Prompt</p>
+    <h1>PromptX AI</h1>
+<p class="subtitle">一站式 AI Prompt 创作平台</p>
+
+<div class="hero-tag">
+  <span>GPT Image</span>
+  <span>Midjourney</span>
+  <span>Flux</span>
+  <span>可灵 AI</span>
+  <span>即梦 AI</span>
+</div>
 
     <div class="hero-btns">
         <button onclick="document.getElementById('input').focus()">
@@ -46,7 +54,12 @@
 <section class="hero">
 
 <input id="input" placeholder="请输入你的创意，例如：一位女孩站在海边">
-
+<div class="quick-tools">
+  <button onclick="fill('赛博朋克少女')">⚡ 赛博朋克</button>
+  <button onclick="fill('电影感摄影')">🎬 电影感</button>
+  <button onclick="fill('国风美女')">🏮 国风</button>
+  <button onclick="fill('豪车广告')">🚗 豪车</button>
+</div>
 <div class="buttons">
 
 <button onclick="imagePrompt()">🖼️ 图片Prompt</button>
