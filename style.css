@@ -218,3 +218,35 @@ body::after{
     filter:blur(140px);
     z-index:-2;
 }
+.stats{
+    max-width:1000px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    padding:0 20px;
+}
+
+.stat{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(15px);
+    border-radius:18px;
+    text-align:center;
+    padding:30px 20px;
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 20px rgba(0,198,255,.35);
+}
+
+.stat h2{
+    font-size:38px;
+    color:#4fd1ff;
+    margin-bottom:10px;
+}
+
+.stat p{
+    color:#ccc;
+}
