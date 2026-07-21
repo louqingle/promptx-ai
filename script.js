@@ -1,14 +1,4 @@
-const SUPABASE_URL = "https://tcfpilirqswaqdfnhhvh.supabase.co";
-
-const SUPABASE_KEY = "sb_publishable_KXWSqMGc1OCkGx27qtAZeg_vhFC_xm9";
-
-const supabase = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
-
-async function testSupabase() {
-  const { data, error } = await supabase.auth.getSession();
+ const { data, error } = await supabase.auth.getSession();
 
   if (error) {
     console.log(error);
